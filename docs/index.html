@@ -32,9 +32,20 @@
     function test() {
         var str = navigator.userAgent;
         if(str.includes('YLZDriver')) {
-            YLZDriver.postMessage(JSON.stringify({method:'openWeChat'}));
+            YLZDriver.postMessage(JSON.stringify({method:'openWeChat', params:{'key1': 'value1', 'key2':'value2'}}));
         }
-        alert('mmm');
+    }
+
+    function sayHello(args) {
+        alert('来自FLutter ===>' + args);
+    }
+
+    function onJSBridgeSuccess(args) {
+        alert('onJSBridgeSuccess:' + args);
+    }
+
+    function onJSBridgeError(args) {
+        alert('onJSBridgeError:' + args);
     }
     //]]>
     </script>
