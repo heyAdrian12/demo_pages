@@ -35,11 +35,11 @@
       if (str.includes('Fiture')) {
         Fiture.postMessage(JSON.stringify({ method: 'openWeChat', params: { 'key1': 'value1', 'key2': 'value2' } }));
 
-        setTimeout(() => Fiture.postMessage(JSON.stringify({ method: 'toast', params: '这是一个来自于JS的toast' })), 5);
+        Fiture.postMessage(JSON.stringify({ method: 'toast', params: '这是一个来自于JS的toast' }));
 
-        setTimeout(() => Fiture.postMessage(JSON.stringify({ method: 'getUserInfo', params: {} })), 5);
+        Fiture.postMessage(JSON.stringify({ method: 'getUserInfo', params: {} }));
 
-        setTimeout(() => Fiture.postMessage(JSON.stringify({ method: 'close', params: { 'status': true } })), 5);
+        Fiture.postMessage(JSON.stringify({ method: 'close', params: { 'status': true } }));
 
       }
 
